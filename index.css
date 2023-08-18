@@ -1,0 +1,338 @@
+/* ----- bannner ----- */
+.banner {
+	padding: 0 42px;
+	width: 100%;
+	overflow: hidden;
+}
+.banner_container, .container_cover {
+	column-gap: 1px;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+.banner_container {
+	margin-top: -256px;
+}
+.banner_img {
+	height: 496px;
+	width: 100%;
+}
+.banner_img img {
+	margin: auto;
+	height: 100%;
+	object-fit: cover;
+	object-position: center center;
+	width: 100%;
+}
+.banner_item {
+	background-size: cover;
+	background-position: center center;
+	filter: blur(5px);
+}
+.banner_item, .cover_item {
+	align-items: center;
+	display: flex;
+	flex-basis: 27%;
+	font-size: 24px;
+	height: 256px;
+	justify-content: center;
+	letter-spacing: 5px;
+	writing-mode: vertical-rl;
+}
+.banner_item:nth-child(1) {
+	background-image: url(img/banner_item_1.jpeg);
+}
+.banner_item:nth-child(2) {
+	background-image: url(img/banner_item_2.jpeg);
+}
+.banner_item:nth-child(3) {
+	background-image: url(img/banner_item_3.jpeg);
+	background-position: center bottom;
+	transform: scaleX(-1) scaleY(-1);
+}
+.cover_pic_container {
+	margin: -89px auto 0 auto;
+    max-width: 1024px;
+}
+.cover_item {
+	background-color: rgba(63, 93, 69, 0.8);
+	color: #FFF;
+	z-index: 1;
+}
+.cover_item:hover {
+	background-color: rgba(255, 225, 128, 0.8);
+	color: #3F5D45;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+/* ----- main area ----- */
+/* --- general --- */
+main {
+	width: 100%;
+}
+main section {
+	margin-top: 80px;
+}
+
+.banner, .content_container, .products {
+	padding: 0 42px;
+	width: 100%;
+}
+
+/* ----- content section ----- */
+.content {
+	color: #8DA291;
+	line-height: 2;
+	padding: 70px 80px 70px 55px;
+	writing-mode: vertical-rl;
+
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 64px;
+}
+.content_background {
+	background-color: #EAF0ED;
+	height: 420px;
+	width: 100%;
+}
+.content_container {
+	display: flex;
+	max-height: 460px;
+	max-width: 1024px;
+	margin: -440px auto 0 auto;
+	justify-content: space-between;
+	width: 100%;
+}
+.content_img img {
+	height: 100%;
+	max-width: 460px;
+	object-fit: cover;
+	object-position: center center;
+	width: 100%;
+}
+.text_img img {
+	width: 89px;
+}
+
+/* --- content section 2 --- */
+.section_2 .content {
+	padding: 70px 80px 70px 13px;
+}
+.section_2 .text_img {
+	padding-right: 42px;
+}
+
+/* --- content section 3 --- */
+.section_3 img {
+	margin: auto;
+	width: 89px;
+}
+
+/* --- products --- */
+.above_img {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+	z-index: 1;
+}
+.button {
+	color: #3F5D45;
+	cursor: pointer;
+	background-color: #EAF0ED;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 16px 90px;
+	text-align: center;
+}
+.daily_special {
+	background-color: #3F5D45;
+	color: #FFF;
+	font-weight: bold;
+	letter-spacing: 4px;
+	padding: 10px;
+	writing-mode: vertical-lr;
+}
+.favo_icon {
+	color: #3F5D45;
+	cursor: pointer;
+	font-size: 20px;
+	padding-top: 19px;
+}
+.name_price {
+	border: 1px solid #EAF0ED;
+	color: #3F5D45;
+	display: flex;
+	font-size: 20px;
+}
+.products {
+	padding-bottom: 60px;
+}
+.product_container {
+	column-gap: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: auto;
+	max-width: 1024px;
+}
+.product_img {
+	margin-top: -100px;
+}
+.product_img img {
+	height: 300px;
+	width: 100%;
+	object-fit: cover;
+}
+.product_item {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 30%;
+	max-width: 300px;
+	min-width: 300px;
+}
+.product_name {
+	border: 1px solid #EAF0ED;
+	flex-basis: 57.7%;
+	padding: 17px 0px 17px 33px;
+}
+.product_price {
+	border: 1px solid #EAF0ED;
+	flex-basis: 42.3%;
+	font-weight: bold;
+	padding: 17px 20px 17px 0px;
+	text-align: right;
+}
+
+
+/* ----- RWD for tabelet ----- */
+
+@media (min-width: 700px) and (max-width: 1023px) {
+	/* ----- main area ----- */
+	/* --- products --- */
+	.product_container {
+		flex-direction: column;
+		row-gap: 30px;
+	}
+	.product_item {
+		max-width: none;
+	}
+	.product_name, .product_price {
+		padding: 17px 0;
+		text-align: center;
+	}
+	.products {
+		padding: 0 122px 60px 122px;
+	}
+}
+
+
+/* ----- RWD for cell phones ----- */
+@media (max-width: 699px) {
+	main section {
+		margin-top: 0px;
+	}
+
+	/* ----- header ----- */
+	/* --- banner --- */
+	.banner {
+		padding: 0 0;
+	}
+	.banner_container {
+		margin-top: -180px;
+	}
+	.banner_img {
+		height: 277px;
+	}
+	.banner_item, .cover_item {
+		flex-basis: 33.33%;
+		height: 180px;
+	}
+	.cover_item {
+		font-size: 20px;
+	}
+	.cover_pic_container {
+		margin-top: 0;
+	}
+
+	/* ----- main area ----- */
+	/* ----- content ----- */
+	.content_background {
+		background-color: #fff;
+		height: 120px;
+	}
+	.text_img {
+		display: none;
+	}
+	/* --- content --- */
+	.content {
+		background-color: #EAF0ED;
+		padding: 30px;
+		writing-mode: horizontal-tb;
+	}
+	.content_background {
+		background-repeat: no-repeat;
+		background-size: 226px;
+		background-position: 50% 50%;
+	}
+	.content_container {
+		flex-direction: column;
+		margin: 0;
+		max-height: 682px;
+		padding: 0;
+	}
+	.content_img {
+		height: 250px;
+	}
+	.content_img img {
+		max-width: none;
+	}
+	.section_1 .content_background {
+		background-image: url(img/sm-content_t1.svg);
+	}
+	.section_2 .content_background {
+		background-image: url(img/sm-content_t2.svg);
+	}
+
+	/* --- section 2 --- */
+	.section_2 .content_container {
+		flex-direction: column-reverse;
+	}
+	.section_2 .content {
+		padding: 30px;
+	}
+
+	/* --- section 3 --- */
+	.section_3 {
+		background-image: url(img/sm-content_t3.svg);
+		background-repeat: no-repeat;
+		background-size: 226px;
+		background-position: 50% 50%;
+		height: 120px;
+	}
+	.section_3 img {
+		display: none;
+	}
+
+	/* --- products --- */
+	.product_container {
+		flex-direction: column;
+	}
+	.product_img img {
+		max-height: 315px;
+	}
+	.product_item {
+		max-width: none;
+	}
+	.product_name, .product_price {
+		padding: 17px 0;
+		text-align: center;
+	}
+	.products {
+		padding: 0 30px 30px 30px;
+	}
+	.product_item:nth-child(2), .product_item:nth-child(3) {
+		display: none;
+	}
+}
