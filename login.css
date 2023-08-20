@@ -1,11 +1,7 @@
-main {
-    margin: 130px 0 60px 0;
-}
-
 /* --- container --- */
 .login_container {
     display: flex;
-    margin: auto;
+    margin: 30px auto 60px auto;
     max-width: 780px;
 }
 
@@ -45,17 +41,17 @@ input::placeholder {
 
 .login {
     background-color: #3F5D45;
-    color: #FFF;
+    color: #EAF0ED;
 }
 .login ul {
-    padding: 40px 30px 22px 30px;
+    padding: 40px 30px 25px 30px;
 }
 
 .login, .connect_sns {
     flex-basis: 50%;
 }
 .login li:nth-child(1) {
-    color: #FFF;
+    color: #EAF0ED;
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 40px;
@@ -72,6 +68,9 @@ input::placeholder {
     background-color: #EAF0ED;
     font-size: 24px;
     padding: 16px 20px;
+}
+.login_title {
+    display: none;
 }
 
 /* --- connect sns --- */
@@ -99,4 +98,55 @@ input::placeholder {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
+}
+
+
+/* ----- RWD for tablet & cell phones ----- */
+@media (max-width: 830px) {
+    .login_title {
+        display: block;
+        background-color: #3F5D45;
+        color: #EAF0ED;
+        font-size: 36px;
+        font-weight: bold;
+        padding: 30px 115px;
+        text-align: center;
+    }
+
+    /* --- connect sns --- */
+    .connect_sns {
+        padding: 30px;
+    }
+    .connect_sns img {
+        width: 83px;
+    }
+    .connect_sns > ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    .connect_sns > ul > li:not(:nth-child(1)) {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    /* --- login --- */
+    #account, #password {
+        max-width: 259px;
+        min-width: 259px;
+    }
+    .connect_sns {
+        margin: 0;
+    }
+    .connect_sns ul li:first-child, 
+    .login_container ul li:first-child {
+        display: none;
+    }
+    .login_container {
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        max-width: none;
+    }
+    .login ul {
+        padding: 30px;
+    }
 }
