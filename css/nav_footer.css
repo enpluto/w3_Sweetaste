@@ -46,7 +46,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+input, select { /* 修正ios自動圓角 */
+	-webkit-appearance: none;
+	border-radius: 0;
+}
 
 /* ----- body & general setup ------ */
 *, *:before, *:after {
@@ -83,6 +86,7 @@ nav {
 	margin-top: 100px;
 }
 .links_cart {
+	align-items: center;
 	column-gap: 70px;
 	display: flex;
 }
