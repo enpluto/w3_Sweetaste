@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width>, initial-scale=1.0">
     <title>Sweetase</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="shipping.css">
+    <link rel="stylesheet" href="payment.css">
     <link rel="stylesheet" href="css/nav_footer.css">
 </head>
 <body>
@@ -33,94 +33,66 @@
             <div class="shipping_detail">
                 <ul>
                     <ol>
-                        <li>運送</li>
+                        <li>付款</li>
                         <ul>
-                            <li><span class="material-symbols-outlined" style="font-variation-settings:
-                                'FILL' 0,
-                                'wght' 400,
-                                'GRAD' 0,
-                                'opsz' 48">radio_button_checked</span></li>
-                            <li><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">circle</span></li>
+                            <li><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span></li>
+                            <li><span class="material-symbols-outlined">radio_button_checked</span></li>
                             <li><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">circle</span></li>
                         </ul>
                     </ol>
                     <ol>
+                        <li>信用卡卡號</li>
                         <ul>
-                            <li><label for="last_name">姓氏</label></li>
-                            <li><input type="text" name="last_name" id="last_name" placeholder="王"></li>
+                            <li><input type="tel" name="credit_card" id="credit_card" maxlength="16" pattern="[0-9]*" inputmode="numeric" placeholder="9012-3456-7890-1234"></li>
+                            <li><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">credit_card</span></li>
                         </ul>
+                    </ol>
+                    <ol>
+                        <li>持卡人姓名</li>
                         <ul>
-                            <li>名字</li>
+                            <li><input type="text" name="last_name" id="last_name" placeholder="王"></li>
                             <li><input type="text" name="first_name" id="first_name" placeholder="小明"></li>
                         </ul>
-                    </ol>
-                    <ol>
-                        <li>電話</li>
-                        <li><input type="tel" name="phone" id="phone" placeholder="0912-345-678"></li>
-                    </ol>
-                    <ol>
-                        <li>地址</li>
+                        <li>有效期限</li>
                         <ul>
                             <li>
-                                <select type="text" name="city" id="city">
-                                    <option value="Taipei City">台北市</option>
-                                    <option value="New Taipei City">新北市</option>
-                                    <option value="Taoyuan City">桃園市</option>
-                                    <option value="Taichung City">台中市</option>
-                                    <option value="Tainan City">台南市</option>
-                                    <option value="Kaohsiung City" selected>高雄市</option>
-                                    <option value="Keelung City">基隆市</option>
-                                    <option value="Hsinchu City">新竹市</option>
-                                    <option value="Hsinchu County">新竹縣</option>
-                                    <option value="Miaoli County">苗栗縣</option>
-                                    <option value="Changhua County">彰化縣</option>
-                                    <option value="Nantou County">南投縣</option>
-                                    <option value="Yunlin County">雲林縣</option>
-                                    <option value="Chiayi City">嘉義市</option>
-                                    <option value="Chiayi County">嘉義縣</option>
-                                    <option value="Pingtung County">屏東縣</option>
-                                    <option value="Yilan County">宜蘭縣</option>
-                                    <option value="Hualien County">花蓮縣</option>
-                                    <option value="Taitung County">台東縣</option>
-                                    <option value="Penghu County">澎湖縣</option>
-                                    <option value="Kinmen County">金門縣</option>
-                                    <option value="Lienchiang County">連江縣</option>
+                                <select id="monthSelect">
+                                    <option value="" disabled selected>月</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
                                 </select>
                             </li>
                             <li>
-                                <select type="text" name="dist" id="dist">
-                                    <option value="Fengshan District">鳳山區</option>
-                                    <option value="Gushan District">鼓山區</option>
-                                    <option value="Lingya District">苓雅區</option>
-                                    <option value="Qianjin District">前金區</option>
-                                    <option value="Xinxing District" selected>新興區</option>
-                                    <option value="Yancheng District">鹽埕區</option>
-                                    <option value="Qijin District">旗津區</option>
-                                    <option value="Sanmin District">三民區</option>
-                                    <option value="Siaogang District">小港區</option>
-                                    <option value="Daliao District">大寮區</option>
-                                    <option value="Zuoying District">左營區</option>
-                                    <option value="Nanzi District">楠梓區</option>
-                                    <option value="Sanmin District">三民區</option>
-                                    <option value="Niaosong District">鳥松區</option>
-                                    <option value="Zuoying District">左營區</option>
-                                    <option value="Gangshan District">岡山區</option>
-                                    <option value="Qiaotou District">橋頭區</option>
-                                    <option value="Dashe District">大社區</option>
-                                    <option value="Renwu District">仁武區</option>
-                                    <option value="Tianliao District">田寮區</option>
-                                    <option value="Lujhu District">路竹區</option>
-                                    <option value="Alian District">阿蓮區</option>
-                                    <option value="Mituo District">彌陀區</option>
-                                    <option value="Yanchao District">燕巢區</option>
-                                    <option value="Tianwei District">田尾區</option>
+                                <select id="yearSelect">
+                                    <option value="" disabled selected>年</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2014">2014</option>
                                 </select>
                             </li>
                         </ul>
-                        <li><input type="text" name="address" id="address" placeholder="幸福路 520 號"></li>
+                        <li>背後末三碼</li>
+                        <ul><li><input type="tel" name="cvv_check" id="cvv_check" placeholder="123"></li></ul>
                     </ol>
                 </ul>
-                <div class="shipping_submit"><a href="payment.html">下一步</a></div>
+                <div class="shipping_submit">下一步</div>
             </div>
             <div class="order_container">
                 <div class="order_info">
