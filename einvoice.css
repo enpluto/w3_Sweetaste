@@ -1,0 +1,226 @@
+a {
+    text-decoration: none;
+}
+.invoice_container {
+    column-gap: 20px;
+    display: flex;
+    margin: 30px auto 65px auto;
+    max-width: 780px;
+}
+.payment_submit, .payment_submit a {
+    align-items: center;
+    background-color: #FFE180;
+    color: #3F5D45;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    height: 65px;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+/* ----- invoices details ----- */
+input:not(#checkbox), select {
+    background-color: #EAF0ED;
+    border: none;
+    color: #8DA291;
+    font-size: 16px;
+    height: 56px;
+    letter-spacing: 1px;
+    padding: 17px 20px;
+    width: 100%;
+}
+input::placeholder {
+    color: #8DA291;
+    font-size: 16px;
+}
+.invoice_detail .material-symbols-outlined {
+    font-size: 20px;
+}
+.invoice_detail {
+    color: #EAF0ED;
+    flex-basis: 68.09%;
+    font-size: 20px;
+    max-width: 460px;
+}
+
+
+/* --- title & progress bar --- */
+.invoice_detail ol:first-child ul li {
+    display: flex;
+    flex-direction: column;
+}
+.invoice_detail > ul {
+    background-color: #3F5D45;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    row-gap: 16px;
+}
+.invoice_detail ol:first-child {
+    align-items: center;
+    display: flex;
+    font-size: 36px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+.invoice_detail ol:nth-child(1) ul li:nth-child(2) {
+    color: #EAF0ED;
+    text-align: center;
+    z-index: 1;
+}
+.invoice_detail ol:nth-child(1) ul li:last-child {
+    color: #EAF0ED;
+    text-align: right;
+}
+.invoice_detail ol:first-child li {
+    flex-basis: 33.3%;
+    z-index: 1;
+}
+.invoice_detail ol:first-child ul::before {
+    border-top: 1px solid #EAF0ED;
+    content: "";
+    position: absolute;
+    left: 27.5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 37.5%;
+}
+.invoice_detail ol:first-child ul::after {
+    border-top: 1px solid #EAF0ED;
+    content: "";
+    position: absolute;
+    left: 72%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 37%;
+}
+.invoice_detail ol:first-child ul {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: row;
+    position: relative;
+}
+
+/* --- select invoice --- */
+.invoice_detail ol:nth-child(2) {
+    display: flex;
+    height: 56px;
+    margin: 14px 0;
+}
+.invoice_detail ol:nth-child(2) li {
+    align-items: center;
+    display: flex;
+    flex-basis: 50%;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+}
+.invoice_detail ol:nth-child(2) li:first-child {
+    background-color: #EAF0ED;
+}
+.invoice_detail ol:nth-child(2) li:first-child a {
+    color: #3F5D45;
+}
+.invoice_detail ol:nth-child(2) li:last-child {
+    border: 1px solid #EAF0ED;
+}
+.invoice_detail ol:nth-child(2) li:last-child a {
+    color: #EAF0ED;
+}
+
+/* --- email --- */
+.invoice_detail ol:nth-child(3),
+.invoice_detail ol:last-child {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+
+/* ----- order infomation ----- */
+.order_container {
+    display: flex;
+    flex-basis: 31.91%;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.order_container img {
+    height: 80px;
+    width: 120px;
+    object-fit: cover;
+}
+
+/* --- amount & products --- */
+.order_info, .order_item {
+    color: #8DA291;
+    max-width: 300px;
+}
+.order_info > ul > li:first-child, 
+.order_item > ul > li:first-child {
+    align-items: center;
+    background-color: #EAF0ED;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    height: 65px;
+    justify-content: center;
+    text-align: center;
+    width: 300px;
+}
+.order_info > ul > li:last-child,
+.order_item > ul > li:last-child {
+    border: 1px solid #EAF0ED;
+    padding: 16px 20px;
+}
+.order_info > ul > li ol {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+}
+.order_info > ul > li ol:last-child {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 8px;
+}
+.order_item ol {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.25;
+}
+.order_item ol li:last-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+.order_item > ul > li:last-child {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+
+/* ----- RWD for cell phones ----- */
+@media (max-width: 699px) {
+    .invoice_container {
+        flex-direction: column;
+        margin: 0 auto 0 auto;
+    }
+    .invoice_detail {
+        flex-basis: 100%;
+        max-width: none;
+    }
+    .invoice_detail ol:first-child ul::before {
+        left: 27.5%;
+        width: 35%;
+    }
+    .invoice_detail ol:first-child ul::after {
+        left: 72.5%;
+        width: 35%;
+    }
+    .order_container {
+        display: none;
+    }
+}
