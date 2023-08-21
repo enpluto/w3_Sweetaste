@@ -47,7 +47,6 @@ table {
 	border-spacing: 0;
 }
 input, select { /* 修正ios自動圓角 */
-	-webkit-appearance: none;
 	border-radius: 0;
 }
 

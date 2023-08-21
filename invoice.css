@@ -1,10 +1,13 @@
-.shipping_container {
+a {
+    text-decoration: none;
+}
+.invoice_container {
     column-gap: 20px;
     display: flex;
     margin: 30px auto 65px auto;
     max-width: 780px;
 }
-.shipping_submit, .shipping_submit a {
+.payment_submit, .payment_submit a {
     align-items: center;
     background-color: #FFE180;
     color: #3F5D45;
@@ -18,8 +21,8 @@
     width: 100%;
 }
 
-/* ----- credit card details ----- */
-input, select {
+/* ----- invoices details ----- */
+input:not(#checkbox), select {
     background-color: #EAF0ED;
     border: none;
     color: #8DA291;
@@ -33,44 +36,50 @@ input::placeholder {
     color: #8DA291;
     font-size: 16px;
 }
-.shipping_detail .material-symbols-outlined {
+.invoice_detail .material-symbols-outlined {
     font-size: 20px;
 }
-
-.shipping_detail {
+.invoice_detail {
     color: #EAF0ED;
     flex-basis: 68.09%;
     font-size: 20px;
     max-width: 460px;
 }
-.shipping_detail > ul {
+
+
+/* --- title & progress bar --- */
+.invoice_detail ol:first-child ul li {
+    display: flex;
+    flex-direction: column;
+}
+.invoice_detail > ul {
     background-color: #3F5D45;
     display: flex;
     flex-direction: column;
     padding: 30px 40px;
     row-gap: 16px;
 }
-.shipping_detail ol:first-child {
+.invoice_detail ol:first-child {
     align-items: center;
-    column-gap: 8px;
     display: flex;
     font-size: 36px;
     font-weight: bold;
     justify-content: space-between;
 }
-.shipping_detail ol:nth-child(1) ul li:nth-child(2) {
+.invoice_detail ol:nth-child(1) ul li:nth-child(2) {
     color: #EAF0ED;
     text-align: center;
-}
-.shipping_detail ol:nth-child(1) ul li:last-child {
-    color: #8DA291;
-    text-align: right;
-}
-.shipping_detail ol:first-child li {
-    flex-basis: 50%;
     z-index: 1;
 }
-.shipping_detail ol:first-child ul::before {
+.invoice_detail ol:nth-child(1) ul li:last-child {
+    color: #EAF0ED;
+    text-align: right;
+}
+.invoice_detail ol:first-child li {
+    flex-basis: 33.3%;
+    z-index: 1;
+}
+.invoice_detail ol:first-child ul::before {
     border-top: 1px solid #EAF0ED;
     content: "";
     position: absolute;
@@ -79,63 +88,87 @@ input::placeholder {
     transform: translate(-50%, -50%);
     width: 37.5%;
 }
-.shipping_detail ol:first-child ul::after {
-    border-top: 1px solid #8DA291;
+.invoice_detail ol:first-child ul::after {
+    border-top: 1px solid #EAF0ED;
     content: "";
     position: absolute;
-    left: 75%;
+    left: 72%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 40%;
+    width: 37%;
 }
-.shipping_detail ol:first-child ul {
+.invoice_detail ol:first-child ul {
     display: flex;
     flex-basis: 50%;
     flex-direction: row;
     position: relative;
 }
-.shipping_detail ol:nth-child(2) {
+
+/* --- select invoice --- */
+.invoice_detail ol:nth-child(2) {
     display: flex;
-    flex-direction: column;
-    row-gap: 16px;
+    height: 56px;
+    margin: 14px 0;
 }
-.shipping_detail ol ul,
-.shipping_detail ol ul li {
+.invoice_detail ol:nth-child(2) li {
+    align-items: center;
     display: flex;
     flex-basis: 50%;
-    flex-direction: column;
-}
-.shipping_detail ol:last-child {
-    display: flex;
-    flex-direction: column;
-    row-gap: 16px;
-}
-.shipping_detail ol:last-child ul {
-    column-gap: 8px;
-    flex-direction: row;
-}
-.shipping_detail ol ul {
-    row-gap: 16px;
-}
-.shipping_detail ol:nth-child(3) {
-    display: flex;
-    flex-direction: column;
-    row-gap: 16px;
-}
-.shipping_detail ol ul {
-    row-gap: 16px;
-    flex-direction: row;
-}
-.shipping_detail ol:nth-child(2) ul li:first-child {
-    flex-basis: 85%;
-}
-.shipping_detail ol:nth-child(2) ul li:last-child {
-    background: #EAF0ED;
-    color: #3F5D45;
-    flex-basis: 15%;
+    font-weight: bold;
     justify-content: center;
     text-align: center;
 }
+.invoice_detail ol:nth-child(2) li:first-child {
+    border: 1px solid #EAF0ED;
+}
+.invoice_detail ol:nth-child(2) li:first-child a {
+    color: #EAF0ED;
+}
+.invoice_detail ol:nth-child(2) li:last-child {
+    background-color: #EAF0ED;
+}
+.invoice_detail ol:nth-child(2) li:last-child a {
+    color: #3F5D45;
+}
+
+/* ----- address ----- */
+/* --- title --- */
+.invoice_detail ol:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.invoice_detail ol:nth-child(3) ul {
+    display: flex;
+    justify-content: space-between;
+}
+.invoice_detail ol:nth-child(3) ul li {
+    flex-basis: 50%;
+}
+.invoice_detail ol:nth-child(3) ul li:last-child {
+    align-items: center;
+    column-gap: 8px;
+    display: flex;
+    font-size: 16px;
+    justify-content: flex-end;
+}
+
+/* --- address inputs --- */
+.invoice_detail ol:nth-child(3) ul:last-child {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.invoice_detail ol:nth-child(3) ul:last-child ol {
+    column-gap: 8px;
+    display: flex;
+}
+.invoice_detail ol:last-child {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
 
 /* ----- order infomation ----- */
 .order_container {
@@ -201,19 +234,19 @@ input::placeholder {
 
 /* ----- RWD for cell phones ----- */
 @media (max-width: 699px) {
-    .shipping_container {
+    .invoice_container {
         flex-direction: column;
         margin: 0 auto 0 auto;
     }
-    .shipping_detail {
+    .invoice_detail {
         flex-basis: 100%;
         max-width: none;
     }
-    .shipping_detail ol:first-child ul::before {
+    .invoice_detail ol:first-child ul::before {
         left: 27.5%;
         width: 35%;
     }
-    .shipping_detail ol:first-child ul::after {
+    .invoice_detail ol:first-child ul::after {
         left: 72.5%;
         width: 35%;
     }
