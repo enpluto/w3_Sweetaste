@@ -63,12 +63,15 @@ main {
 	z-index: 1;
 }
 .button {
-	color: #3F5D45;
-    cursor: pointer;
+	align-items: center;
 	background-color: #EAF0ED;
+	color: #3F5D45;
+	cursor: pointer;
+	display: flex;
 	font-size: 24px;
 	font-weight: bold;
-	padding: 16px 90px;
+	height: 65px;
+	justify-content: center;
 	text-align: center;
 }
 .daily_special {
@@ -99,6 +102,7 @@ main {
 	color: #3F5D45;
 	display: flex;
 	font-size: 20px;
+    height: 56px;
 }
 .product_img {
 	margin-top: -100px;
@@ -111,20 +115,22 @@ main {
 .product_item {
 	display: flex;
 	flex-direction: column;
-	flex-basis: 50%;
-    max-width: 300px;
+	flex-basis: 48.387%;
 }
 .product_name {
+	align-items: center;
 	border: 1px solid #EAF0ED;
+	display: flex;
 	flex-basis: 57.7%;
-	padding: 17px 0px 17px 33px;
+	justify-content: center;
 }
 .product_price {
+	align-items: center;
 	border: 1px solid #EAF0ED;
+	display: flex;
 	flex-basis: 42.3%;
 	font-weight: bold;
-	padding: 17px 20px 17px 0px;
-	text-align: right;
+	justify-content: center;
 }
 
 
@@ -236,8 +242,8 @@ main {
 
     /* --- product item --- */
     .item_container {
+        justify-content: center;
         margin-top: 30px;
-        width: 315px;
     }
     .product_item {
         flex-basis: 100%;
