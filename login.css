@@ -31,9 +31,10 @@ input::placeholder {
 
 #account, #password {
     background-color: #EAF0ED;
+    flex-basis: 95%;
     margin-bottom: 16px;
     height: 56px;
-    width: 274px;
+    width: 100%;
 }
 #checkbox {
     margin-right: 8px;
@@ -64,10 +65,15 @@ input::placeholder {
     margin-bottom: 16px;
 }
 .login .material-symbols-outlined {
-    color: #3F5D45;
+    align-items: center;
     background-color: #EAF0ED;
+    color: #3F5D45;
+    display: flex;
+    flex-basis: 5%;
     font-size: 24px;
-    padding: 16px 20px;
+    justify-content: center;
+    max-width: 56px;
+    min-width: 56px;
 }
 .login_title {
     display: none;
@@ -130,10 +136,6 @@ input::placeholder {
     }
 
     /* --- login --- */
-    #account, #password {
-        max-width: 259px;
-        min-width: 259px;
-    }
     .connect_sns {
         margin: 0;
     }
