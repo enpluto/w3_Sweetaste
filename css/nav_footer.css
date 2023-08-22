@@ -114,11 +114,11 @@ nav {
 	max-width: 1024px;
 }
 .navi_cart .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+	font-variation-settings:
+	'FILL' 1,
+	'wght' 400,
+	'GRAD' 0,
+	'opsz' 48
 }
 .navi_links {
 	column-gap: 60px;
@@ -289,6 +289,7 @@ nav {
 	/* ----- header ----- */
 	/* --- navigation bar --- */
 	.menu_icon, .mobile_logo {
+		cursor: pointer;
 		display: block;
 	}
 	.mobile_logo {

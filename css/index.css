@@ -56,15 +56,28 @@
 }
 .cover_item {
 	background-color: rgba(63, 93, 69, 0.8);
-	color: #FFF;
+	color: #FFF !important;
 	z-index: 1;
 }
 .cover_item:hover {
 	background-color: rgba(255, 225, 128, 0.8);
-	color: #3F5D45;
+	color: #3F5D45 !important;
 	cursor: pointer;
 	font-weight: bold;
 }
+.cover_item a {
+	align-items: center;
+	color: #FFF;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	text-decoration: none;
+	width: 100%;
+}
+.cover_item a:hover {
+	color: #3F5D45;
+}
+
 
 /* ----- main area ----- */
 /* --- general --- */
@@ -137,7 +150,7 @@ main section {
 	padding: 0 20px;
 	z-index: 1;
 }
-.button {
+.button, .button a {
 	align-items: center;
 	background-color: #EAF0ED;
 	color: #3F5D45;
@@ -148,6 +161,7 @@ main section {
 	height: 65px;
 	justify-content: center;
 	text-align: center;
+	text-decoration: none;
 }
 .daily_special {
 	background-color: #3F5D45;

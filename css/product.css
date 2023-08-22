@@ -47,6 +47,9 @@ main {
     background-color: #3F5D45;
     color: #FFF;
 }
+.dessert_type li:nth-child(3) {
+    background-color: #EAF0ED;
+}
 .dessert_type li:not(:first-child):hover {
     background-color: #EAF0ED;
     cursor: pointer;
@@ -62,7 +65,7 @@ main {
 	padding: 0 20px;
 	z-index: 1;
 }
-.button {
+.button, .button a {
 	align-items: center;
 	background-color: #EAF0ED;
 	color: #3F5D45;
@@ -73,6 +76,7 @@ main {
 	height: 65px;
 	justify-content: center;
 	text-align: center;
+    text-decoration: none;
 }
 .daily_special {
 	background-color: #3F5D45;
