@@ -247,8 +247,8 @@ input::placeholder {
         width: 35%;
     }
     .invoice_detail ol:first-child ul::after {
-        left: 72.5%;
-        width: 35%;
+        left: 72%;
+        width: 33%;
     }
     .order_container {
         display: none;
