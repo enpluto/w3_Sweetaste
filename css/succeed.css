@@ -6,7 +6,7 @@ section img {
 }
 .succeed {
     align-items: center;
-    background-image: url(img/background.jpeg);
+    background-image: url(../img/background.jpeg);
     background-repeat: no-repeat;
     background-size: 940px 460px;
     display: flex;
